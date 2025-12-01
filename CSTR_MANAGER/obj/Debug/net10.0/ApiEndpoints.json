@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "CSTR_MANAGER.Controllers.ReactorController",
+    "Method": "GetReactorData",
+    "RelativePath": "Reactor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "CSTR_MANAGER.Reactor",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
