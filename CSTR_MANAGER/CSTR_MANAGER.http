@@ -1,6 +1,12 @@
 @CSTR_MANAGER_HostAddress = http://localhost:5053
 
-GET {{CSTR_MANAGER_HostAddress}}/reactor/
+GET {{CSTR_MANAGER_HostAddress}}/reactor/initialize
+Accept: application/json
+
+GET {{CSTR_MANAGER_HostAddress}}/reactor/status
+Accept: application/json
+
+GET {{CSTR_MANAGER_HostAddress}}/reactor/step
 Accept: application/json
 
 ###

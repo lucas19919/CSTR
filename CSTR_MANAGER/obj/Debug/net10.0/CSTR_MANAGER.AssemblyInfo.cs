@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSTR_MANAGER")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba73f5b4a26062294d2d0dac5484d2e3fd2c0929")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+728623b7e7738569c9981c9aefbfba0a41ada66c")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSTR_MANAGER")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSTR_MANAGER")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

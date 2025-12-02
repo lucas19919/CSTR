@@ -1,22 +1,44 @@
 [
   {
     "ContainingType": "CSTR_MANAGER.Controllers.ReactorController",
-    "Method": "GetReactorData",
-    "RelativePath": "Reactor",
+    "Method": "Initialize",
+    "RelativePath": "Reactor/initialize",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "initialSettings",
+        "Type": "CSTR_MANAGER.CSTR_Reactor",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CSTR_MANAGER.Controllers.ReactorController",
+    "Method": "GetState",
+    "RelativePath": "Reactor/status",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CSTR_MANAGER.Controllers.ReactorController",
+    "Method": "Step",
+    "RelativePath": "Reactor/step",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "CSTR_MANAGER.Reactor",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "dt",
+        "Type": "System.Single",
+        "IsRequired": false
       }
-    ]
+    ],
+    "ReturnTypes": []
   }
 ]
