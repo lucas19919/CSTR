@@ -215,7 +215,7 @@ export default function App() {
                         {/* CHART 1: Concentration */}
                         <div className={bentoCard}>
                             <div className="flex justify-between items-start mb-2">
-                                <h3 className="font-semibold text-slate-600">Reaction Progress (Ca)</h3>
+                                <h3 className="font-semibold text-slate-600">Concentration Progression</h3>
                             </div>
                             <div className="flex-1 min-h-0 w-full">
                                 <LineChart
@@ -237,7 +237,7 @@ export default function App() {
                         {/* CHART 2: Temperature */}
                         <div className={bentoCard}>
                             <div className="flex justify-between items-start mb-2">
-                                <h3 className="font-semibold text-slate-600">Thermal Profile</h3>
+                                <h3 className="font-semibold text-slate-600">Temperature Progression</h3>
                             </div>
                             <div className="flex-1 min-h-0 w-full">
                                 <LineChart
@@ -247,7 +247,7 @@ export default function App() {
                                     categories={["Temp"]}
                                     colors={["orange"]}
                                     showYAxis={true}
-                                    showLegend={true}
+                                    showLegend={false}
                                     showXAxis={true}
                                     showGridLines={true}
                                     autoMinValue={true}
@@ -259,9 +259,9 @@ export default function App() {
 
                     {/* MIDDLE RIGHT: Live Parameter Stack */}
                     <div className="col-span-4 row-span-5 flex flex-col gap-4 h-full">
-                        <RangeCard title="Inlet Flow Rate" value={reactorConfig.Operation.inletFlowrate} unit="L/hr" min={0} max={50} color="indigo" />
-                        <RangeCard title="Inlet Concentration" value={reactorConfig.Operation.inletConcentration} unit="mol/L" min={0} max={1.0} color="cyan" />
-                        <RangeCard title="Inlet Temperature" value={reactorConfig.Operation.inletTemperature} unit="K" min={200} max={500} color="orange" />
+                        <RangeCard title="Inlet Flow Rate" value={reactorConfig.Operation.inletFlowrate} unit="L/hr" min={0} max={200} color="indigo" />
+                        <RangeCard title="Inlet Concentration" value={reactorConfig.Operation.inletConcentration} unit="mol/L" min={0} max={10} color="cyan" />
+                        <RangeCard title="Inlet Temperature" value={reactorConfig.Operation.inletTemperature} unit="K" min={200} max={1000} color="orange" />
                         <RangeCard title="Coolant Temperature" value={reactorConfig.Operation.coolantTemperature} unit="K" min={200} max={500} color="blue" />
                     </div>
 
