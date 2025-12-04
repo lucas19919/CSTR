@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\postcss.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:postcss.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -67,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "eslint.config.js",
               "DocumentMoniker": "E:\\CSTR\\CSTR_FRONTEND\\eslint.config.js",
               "RelativeDocumentMoniker": "eslint.config.js",
@@ -79,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "vite.config.js",
               "DocumentMoniker": "E:\\CSTR\\CSTR_FRONTEND\\vite.config.js",
               "RelativeDocumentMoniker": "vite.config.js",
@@ -91,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "postcss.config.js",
               "DocumentMoniker": "E:\\CSTR\\CSTR_FRONTEND\\postcss.config.js",
               "RelativeDocumentMoniker": "postcss.config.js",
@@ -103,13 +103,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "tailwind.config.js",
               "DocumentMoniker": "E:\\CSTR\\CSTR_FRONTEND\\tailwind.config.js",
               "RelativeDocumentMoniker": "tailwind.config.js",
               "ToolTip": "E:\\CSTR\\CSTR_FRONTEND\\tailwind.config.js",
               "RelativeToolTip": "tailwind.config.js",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-12-02T14:15:33.642Z"
             },
@@ -145,14 +145,14 @@
               "RelativeDocumentMoniker": "src\\App.jsx",
               "ToolTip": "E:\\CSTR\\CSTR_FRONTEND\\src\\App.jsx",
               "RelativeToolTip": "src\\App.jsx",
-              "ViewState": "AgIAAL0AAAAAAAAAAAAAANEAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAMEAAAAAAAAAAADgv8gAAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2025-12-01T17:16:05.022Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "index.html",
               "DocumentMoniker": "E:\\CSTR\\CSTR_FRONTEND\\index.html",
               "RelativeDocumentMoniker": "index.html",

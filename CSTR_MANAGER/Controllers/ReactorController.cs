@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Text;
 
 namespace CSTR_MANAGER.Controllers
 {
@@ -31,6 +32,15 @@ namespace CSTR_MANAGER.Controllers
         public IActionResult GetState()
         {
             return Ok(_reactorService.GetCurrentState());
+        }
+
+        [HttpGet("simulate")]
+        public IActionResult simulateRun(CSTR_Reactor reactor, [FromQuery] int time)
+        {
+            StringBuilder export = _reactorService.simulateRun(reactor, time);
+            byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes(export.ToString());
+
+            return File(fileBytes, "text/csv", $"simulation_{time}.csv");
         }
     }
 }

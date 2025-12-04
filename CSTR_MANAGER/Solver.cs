@@ -4,19 +4,15 @@ public class Solver
 {
     public void CalculateNextStep(CSTR_Reactor model, float dt)
     {
-        // 1. Calculate Reaction Rate
         float k = model.Reaction.preExponentialFactor * (float)Math.Exp(-model.Reaction.activationEnergy / (model.Reaction.universalGasConstant * model.Operation.currentTemperature));
         float rate = k * model.Operation.currentConcentration;
 
-        // 2. Calculate Gradients
         float concGradient = getConcGrad(model, rate);
         float tempGradient = getTempGrad(model, rate);
 
-        // 3. Update State (Euler Integration)
         model.Operation.currentConcentration += concGradient * dt;
         model.Operation.currentTemperature += tempGradient * dt;
 
-        // --- ADD THIS LINE ---
         model.Operation.currentTime += dt;
     }
 

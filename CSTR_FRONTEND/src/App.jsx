@@ -20,36 +20,38 @@ const bentoCard = "bg-white rounded-[2rem] p-6 flex flex-col justify-between tra
 // --- DEFAULT STATE CONSTANT ---
 const DEFAULT_CONFIG = {
     Geometry: {
-        volume: 100.0,
-        heatTransferCoefficient: 1000.0,
-        heatTransferArea: 5.0
+        volume: 100.0,                  // L
+        heatTransferCoefficient: 1000.0,// W/(m^2·K)  [J/s]
+        heatTransferArea: 5.0           // m^2
     },
     Fluid: {
-        density: 1000.0,
-        specificHeat: 0.239,
-        thermalConductivity: 0.6
+        density: 1.0,                   // kg/L 
+        specificHeat: 4180.0,           // J/(kgK)
+        thermalConductivity: 0.6        // W/(mK)
     },
     Reaction: {
-        reactionEnthalpy: -50000.0,
-        activationEnergy: 72750.0,
-        preExponentialFactor: 72000000000.0,
+        reactionEnthalpy: -50000.0,     // J/mol
+        activationEnergy: 72750.0,      // J/mol
+        preExponentialFactor: 7.2e10,   // 1/s (
         reactionOrder: 1.0,
-        universalGasConstant: 8.314
+        universalGasConstant: 8.314     // J/(molK)
     },
     Operation: {
-        inletFlowrate: 100.0,
-        inletConcentration: 1.0,
-        inletTemperature: 350.0,
-        coolantTemperature: 300.0,
+        inletFlowrate: 0.0278,          // L/s 
+        inletConcentration: 1.0,        // mol/L
+        inletTemperature: 350.0,        // K
+        coolantTemperature: 300.0,      // K
+
         // Independent Variables
-        timeStep: 0.001,
-        currentConcentration: 0.1,
-        currentTemperature: 350.0,
-        currentTime: 0.0
-    }
+        timeStep: 0.1,                  // s
+        currentConcentration: 0.0,      // mol/L
+        currentTemperature: 350.0,      // K
+        currentTime: 0.0                // s
+    },
+
 };
 
-// Helper to format seconds into MM:SS.mmm (Added milliseconds for precision)
+// Helper to format seconds into MM:SS.mmm
 const formatTime = (seconds) => {
     const mins = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
@@ -124,14 +126,12 @@ export default function App() {
 
                         setHistory(prev => {
                             const newPoint = {
-                                // FIX: Use 3 decimal places so small timesteps don't create duplicate "0.0" keys
                                 time: data.operation.currentTime.toFixed(3),
                                 Concentration: data.operation.currentConcentration,
                                 Temp: data.operation.currentTemperature
                             };
                             const newHistory = [...prev, newPoint];
-                            // Increased buffer to 100 points for smoother history
-                            return newHistory.length > 100 ? newHistory.slice(1) : newHistory;
+                            return newHistory;
                         });
                     }
                 } catch (error) {
@@ -160,7 +160,13 @@ export default function App() {
                         <MinimalConfigSection title="Geometry" data={reactorConfig.Geometry} category="Geometry" onChange={handleInputChange} />
                         <MinimalConfigSection title="Fluid Properties" data={reactorConfig.Fluid} category="Fluid" onChange={handleInputChange} />
                         <MinimalConfigSection title="Kinetics" data={reactorConfig.Reaction} category="Reaction" onChange={handleInputChange} lockedFields={["universalGasConstant"]} />
-                        <MinimalConfigSection title="Operation" data={reactorConfig.Operation} category="Operation" onChange={handleInputChange} lockedFields={["currentTime", "currentConcentration", "currentTemperature"]} />
+                        <MinimalConfigSection
+                            title="Operation"
+                            data={reactorConfig.Operation}
+                            category="Operation"
+                            onChange={handleInputChange}
+                            hiddenFields={["currentTime", "currentConcentration", "currentTemperature"]}
+                        />
                     </AccordionList>
                 </div>
 
@@ -203,10 +209,11 @@ export default function App() {
                 <div className="flex-1 min-h-0 grid grid-cols-12 grid-rows-6 gap-4">
 
                     {/* TOP ROW: KPIs */}
-                    <div className="col-span-12 row-span-1 grid grid-cols-3 gap-4">
-                        <KPIBlock title="Current Conc." value={`${reactorConfig.Operation.currentConcentration.toFixed(3)} M`} delta={isRunning ? "Simulating" : "-"} />
+                    <div className="col-span-12 row-span-1 grid grid-cols-4 gap-4">
+                        <KPIBlock title="Current Conc." value={`${reactorConfig.Operation.currentConcentration.toFixed(4)} M`} delta={isRunning ? "Simulating" : "-"} />
                         <KPIBlock title="Current Temp." value={`${reactorConfig.Operation.currentTemperature.toFixed(1)} K`} delta={isRunning ? "Simulating" : "-"} />
-                        <KPIBlock title="Residence Time" value={(reactorConfig.Geometry.volume / reactorConfig.Operation.inletFlowrate * 60).toFixed(1) + " m"} delta="Calc" />
+                        <KPIBlock title="Residence Time" value={(reactorConfig.Geometry.volume / reactorConfig.Operation.inletFlowrate / 60).toFixed(1) + " min"} delta={"Calc"}  />
+                        <KPIBlock title="Conv. Rate" value={((reactorConfig.Operation.inletConcentration - reactorConfig.Operation.currentConcentration) / reactorConfig.Operation.inletConcentration * 100).toFixed(2) + "%"} delta={"Calc"} />
                     </div>
 
                     {/* MIDDLE LEFT: Trends */}
@@ -259,7 +266,7 @@ export default function App() {
 
                     {/* MIDDLE RIGHT: Live Parameter Stack */}
                     <div className="col-span-4 row-span-5 flex flex-col gap-4 h-full">
-                        <RangeCard title="Inlet Flow Rate" value={reactorConfig.Operation.inletFlowrate} unit="L/hr" min={0} max={200} color="indigo" />
+                        <RangeCard title="Inlet Flow Rate" value={reactorConfig.Operation.inletFlowrate} unit="L/s" min={0} max={0.5} color="indigo" />
                         <RangeCard title="Inlet Concentration" value={reactorConfig.Operation.inletConcentration} unit="mol/L" min={0} max={10} color="cyan" />
                         <RangeCard title="Inlet Temperature" value={reactorConfig.Operation.inletTemperature} unit="K" min={200} max={1000} color="orange" />
                         <RangeCard title="Coolant Temperature" value={reactorConfig.Operation.coolantTemperature} unit="K" min={200} max={500} color="blue" />
@@ -269,7 +276,7 @@ export default function App() {
             </main>
         </div>
     );
-}
+} 
 
 // --- VISUALIZATION COMPONENTS ---
 function RangeCard({ title, value, unit, min, max, color }) {
@@ -303,12 +310,12 @@ function KPIBlock({ title, value, delta }) {
     );
 }
 
-function MinimalConfigSection({ title, data, category, onChange, lockedFields = [] }) {
+function MinimalConfigSection({ title, data, category, onChange, lockedFields = [], hiddenFields = [] }) {
     return (
         <Accordion className="border-none shadow-none ring-0 bg-transparent">
             <AccordionHeader className="px-4 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 rounded-xl transition-colors">{title}</AccordionHeader>
             <AccordionBody className="px-4 pb-2 pt-0 space-y-3">
-                {Object.keys(data).map((key) => (
+                {Object.keys(data).filter(key => !hiddenFields.includes(key)).map((key) => (
                     <div key={key} className="group">
                         <div className="flex justify-between items-center mb-1">
                             <label className="text-[10px] text-slate-400 font-bold uppercase tracking-wider group-hover:text-indigo-500 transition-colors">

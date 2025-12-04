@@ -17,6 +17,27 @@
   },
   {
     "ContainingType": "CSTR_MANAGER.Controllers.ReactorController",
+    "Method": "simulateRun",
+    "RelativePath": "Reactor/simulate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reactor",
+        "Type": "CSTR_MANAGER.CSTR_Reactor",
+        "IsRequired": true
+      },
+      {
+        "Name": "time",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CSTR_MANAGER.Controllers.ReactorController",
     "Method": "GetState",
     "RelativePath": "Reactor/status",
     "HttpMethod": "GET",

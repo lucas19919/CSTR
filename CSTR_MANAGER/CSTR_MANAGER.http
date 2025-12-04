@@ -9,4 +9,7 @@ Accept: application/json
 GET {{CSTR_MANAGER_HostAddress}}/reactor/step
 Accept: application/json
 
+GET {{CSTR_MANAGER_HostAddress}}/reactor/simulate
+Accept: application/json
+
 ###
