@@ -5,7 +5,7 @@ public class Solver
     public void CalculateNextStep(CSTR_Reactor model, float dt)
     {
         float k = model.Reaction.preExponentialFactor * (float)Math.Exp(-model.Reaction.activationEnergy / (model.Reaction.universalGasConstant * model.Operation.currentTemperature));
-        float rate = k * model.Operation.currentConcentration;
+        float rate = k * (float)Math.Pow(model.Operation.currentConcentration, model.Reaction.reactionOrder);
 
         float concGradient = getConcGrad(model, rate);
         float tempGradient = getTempGrad(model, rate);

@@ -33,8 +33,6 @@ public class ReactorService
     
     public StringBuilder simulateRun(CSTR_Reactor reactor, int time)
     {
-        Initialize(reactor);
-
         StringBuilder sb = new StringBuilder();
         sb.AppendLine("Time,Concentration,Temperature,ConversionRate");
 

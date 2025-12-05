@@ -12,7 +12,6 @@ namespace CSTR_MANAGER
     public class R_Fluid
     {
         public float density { get; set; }
-        //public float viscosity { get; set; }
         public float specificHeat { get; set; }
         public float thermalConductivity { get; set; }
     }

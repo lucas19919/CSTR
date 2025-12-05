@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\postcss.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:postcss.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\eslint.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -23,20 +23,20 @@
       "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\postcss.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:postcss.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|e:\\cstr\\cstr_frontend\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{37AD3BB6-8C74-16E3-20E6-8CA16B46BCBF}|cstr_frontend.esproj|solutionrelative:vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -75,11 +75,12 @@
               "RelativeToolTip": "eslint.config.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-12-02T17:51:35.473Z"
+              "WhenOpened": "2025-12-02T17:51:35.473Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "vite.config.js",
               "DocumentMoniker": "E:\\CSTR\\CSTR_FRONTEND\\vite.config.js",
               "RelativeDocumentMoniker": "vite.config.js",
@@ -91,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "postcss.config.js",
               "DocumentMoniker": "E:\\CSTR\\CSTR_FRONTEND\\postcss.config.js",
               "RelativeDocumentMoniker": "postcss.config.js",
@@ -99,11 +100,12 @@
               "RelativeToolTip": "postcss.config.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-12-02T17:46:41.993Z"
+              "WhenOpened": "2025-12-02T17:46:41.993Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "tailwind.config.js",
               "DocumentMoniker": "E:\\CSTR\\CSTR_FRONTEND\\tailwind.config.js",
               "RelativeDocumentMoniker": "tailwind.config.js",
@@ -115,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "index.css",
               "DocumentMoniker": "E:\\CSTR\\CSTR_FRONTEND\\src\\index.css",
               "RelativeDocumentMoniker": "src\\index.css",
@@ -123,11 +125,12 @@
               "RelativeToolTip": "src\\index.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-12-02T13:44:14.329Z"
+              "WhenOpened": "2025-12-02T13:44:14.329Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "main.jsx",
               "DocumentMoniker": "E:\\CSTR\\CSTR_FRONTEND\\src\\main.jsx",
               "RelativeDocumentMoniker": "src\\main.jsx",
@@ -135,7 +138,8 @@
               "RelativeToolTip": "src\\main.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-12-01T17:16:07.184Z"
+              "WhenOpened": "2025-12-01T17:16:07.184Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -145,7 +149,7 @@
               "RelativeDocumentMoniker": "src\\App.jsx",
               "ToolTip": "E:\\CSTR\\CSTR_FRONTEND\\src\\App.jsx",
               "RelativeToolTip": "src\\App.jsx",
-              "ViewState": "AgIAAMEAAAAAAAAAAADgv8gAAABrAAAAAAAAAA==",
+              "ViewState": "AgIAAAQBAAAAAAAAAAAAABUBAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2025-12-01T17:16:05.022Z",
               "EditorCaption": ""
@@ -160,7 +164,8 @@
               "RelativeToolTip": "index.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-12-01T17:15:39.087Z"
+              "WhenOpened": "2025-12-01T17:15:39.087Z",
+              "EditorCaption": ""
             }
           ]
         }

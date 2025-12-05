@@ -20,35 +20,35 @@ const bentoCard = "bg-white rounded-[2rem] p-6 flex flex-col justify-between tra
 // --- DEFAULT STATE CONSTANT ---
 const DEFAULT_CONFIG = {
     Geometry: {
-        volume: 100.0,                  // L
-        heatTransferCoefficient: 1000.0,// W/(m^2·K)  [J/s]
-        heatTransferArea: 5.0           // m^2
+        volume: 100.0,                      // L
+        heatTransferCoefficient: 500.0,     // W/(m^2·K) [J/s]
+        heatTransferArea: 5.0               // m^2
     },
     Fluid: {
-        density: 1.0,                   // kg/L 
-        specificHeat: 4180.0,           // J/(kgK)
-        thermalConductivity: 0.6        // W/(mK)
+        density: 1000,                      // kg/m^3
+        specificHeat: 4180.0,               // J/(kgK)
+        thermalConductivity: 0.6            // W/(mK)
     },
     Reaction: {
-        reactionEnthalpy: -50000.0,     // J/mol
-        activationEnergy: 72750.0,      // J/mol
-        preExponentialFactor: 7.2e10,   // 1/s (
+        reactionEnthalpy: -50000,           // J/mol
+        activationEnergy: 75000,            // J/mol
+        preExponentialFactor: 10000000000,  // 1/s
         reactionOrder: 1.0,
-        universalGasConstant: 8.314     // J/(molK)
+        universalGasConstant: 8.314         // J/(molK)
     },
     Operation: {
-        inletFlowrate: 0.0278,          // L/s 
-        inletConcentration: 1.0,        // mol/L
-        inletTemperature: 350.0,        // K
-        coolantTemperature: 300.0,      // K
+        //Independent Variables
+        inletFlowrate: 0.0278,              // L/s 
+        inletConcentration: 10,             // mol/L
+        inletTemperature: 300,              // K
+        coolantTemperature: 290,            // K
 
-        // Independent Variables
-        timeStep: 0.1,                  // s
-        currentConcentration: 0.0,      // mol/L
-        currentTemperature: 350.0,      // K
-        currentTime: 0.0                // s
+        //Dependent variables
+        currentConcentration: 0.5,          // mol/L
+        currentTemperature: 350.0,          // K
+        timeStep: 0.1,                      // s
+        currentTime: 0.0                    // s
     },
-
 };
 
 // Helper to format seconds into MM:SS.mmm
@@ -268,7 +268,7 @@ export default function App() {
                     <div className="col-span-4 row-span-5 flex flex-col gap-4 h-full">
                         <RangeCard title="Inlet Flow Rate" value={reactorConfig.Operation.inletFlowrate} unit="L/s" min={0} max={0.5} color="indigo" />
                         <RangeCard title="Inlet Concentration" value={reactorConfig.Operation.inletConcentration} unit="mol/L" min={0} max={10} color="cyan" />
-                        <RangeCard title="Inlet Temperature" value={reactorConfig.Operation.inletTemperature} unit="K" min={200} max={1000} color="orange" />
+                        <RangeCard title="Inlet Temperature" value={reactorConfig.Operation.inletTemperature} unit="K" min={200} max={600} color="orange" />
                         <RangeCard title="Coolant Temperature" value={reactorConfig.Operation.coolantTemperature} unit="K" min={200} max={500} color="blue" />
                     </div>
 
