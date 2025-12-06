@@ -55,6 +55,11 @@
     "Order": 0,
     "Parameters": [
       {
+        "Name": "updatedModel",
+        "Type": "CSTR_MANAGER.CSTR_Reactor",
+        "IsRequired": true
+      },
+      {
         "Name": "dt",
         "Type": "System.Single",
         "IsRequired": false

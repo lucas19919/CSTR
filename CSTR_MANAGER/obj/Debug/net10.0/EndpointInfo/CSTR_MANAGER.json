@@ -65,6 +65,26 @@
             }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CSTR_Reactor"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CSTR_Reactor"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CSTR_Reactor"
+              }
+            }
+          },
+          "required": true
+        },
         "responses": {
           "200": {
             "description": "OK"

@@ -22,8 +22,9 @@ namespace CSTR_MANAGER.Controllers
         }
 
         [HttpPost("step")]
-        public IActionResult Step([FromQuery] float dt = 0.1f)
+        public IActionResult Step(CSTR_Reactor updatedModel, [FromQuery] float dt = 0.1f)
         {
+            _reactorService.updateModel(updatedModel);
             var newState = _reactorService.Step(dt);
             return Ok(newState);
         }

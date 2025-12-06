@@ -19,8 +19,31 @@ public class ReactorService
         model = initialSettings;
     }
 
+    public void updateModel(CSTR_Reactor inputs)
+    {
+        model.Geometry.volume = inputs.Geometry.volume;
+        model.Geometry.heatTransferArea = inputs.Geometry.heatTransferArea;
+        model.Geometry.heatTransferCoefficient = inputs.Geometry.heatTransferCoefficient;
+
+        model.Fluid.density = inputs.Fluid.density;
+        model.Fluid.specificHeat = inputs.Fluid.specificHeat;
+        model.Fluid.thermalConductivity = inputs.Fluid.thermalConductivity;
+
+        model.Reaction.reactionEnthalpy = inputs.Reaction.reactionEnthalpy;
+        model.Reaction.activationEnergy = inputs.Reaction.activationEnergy;
+        model.Reaction.preExponentialFactor = inputs.Reaction.preExponentialFactor;
+        model.Reaction.reactionOrder = inputs.Reaction.reactionOrder;
+
+        model.Operation.inletFlowrate = inputs.Operation.inletFlowrate;
+        model.Operation.inletConcentration = inputs.Operation.inletConcentration;
+        model.Operation.inletTemperature = inputs.Operation.inletTemperature;
+        model.Operation.coolantTemperature = inputs.Operation.coolantTemperature;
+        model.Operation.timeStep = inputs.Operation.timeStep;
+    }
+
     public CSTR_Reactor Step(float dt)
     {
+        model.Operation.timeStep = dt;
         solver.CalculateNextStep(model, dt);
 
         return model;
