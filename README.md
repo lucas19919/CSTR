@@ -12,3 +12,4 @@ note: the ui was not designed by me, and neither was the majority of the fronten
 
 currently unfinished and neural network has not been added yet. simulation is mostly stable with some anomalies when values are scaled largely
 
+<img width="1902" height="926" alt="Frontend" src="https://github.com/user-attachments/assets/b39bd1f0-0fb9-4ded-980d-cadcf32c9f36" />
