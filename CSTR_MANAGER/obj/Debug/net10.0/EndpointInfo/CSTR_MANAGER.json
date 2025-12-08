@@ -104,6 +104,18 @@
         }
       }
     },
+    "/Reactor/optimize": {
+      "post": {
+        "tags": [
+          "Reactor"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Reactor/simulate": {
       "get": {
         "tags": [

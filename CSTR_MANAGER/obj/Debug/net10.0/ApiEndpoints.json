@@ -17,7 +17,17 @@
   },
   {
     "ContainingType": "CSTR_MANAGER.Controllers.ReactorController",
-    "Method": "simulateRun",
+    "Method": "TriggerOptimization",
+    "RelativePath": "Reactor/optimize",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CSTR_MANAGER.Controllers.ReactorController",
+    "Method": "SimulateRun",
     "RelativePath": "Reactor/simulate",
     "HttpMethod": "GET",
     "IsController": true,

@@ -24,7 +24,7 @@ namespace CSTR_MANAGER.Controllers
         [HttpPost("step")]
         public IActionResult Step(CSTR_Reactor updatedModel, [FromQuery] float dt = 0.1f)
         {
-            _reactorService.updateModel(updatedModel);
+            _reactorService.UpdateModel(updatedModel);
             var newState = _reactorService.Step(dt);
             return Ok(newState);
         }
@@ -35,10 +35,18 @@ namespace CSTR_MANAGER.Controllers
             return Ok(_reactorService.GetCurrentState());
         }
 
-        [HttpGet("simulate")]
-        public IActionResult simulateRun(CSTR_Reactor reactor, [FromQuery] int time)
+        [HttpPost("optimize")]
+        public IActionResult TriggerOptimization()
         {
-            StringBuilder export = _reactorService.simulateRun(reactor, time);
+            _reactorService.optimize = (_reactorService.optimize == true) ? false : true;
+
+            return Ok();
+        }
+
+        [HttpGet("simulate")]
+        public IActionResult SimulateRun(CSTR_Reactor reactor, [FromQuery] int time)
+        {
+            StringBuilder export = _reactorService.SimulateRun(reactor, time);
             byte[] fileBytes = System.Text.Encoding.UTF8.GetBytes(export.ToString());
 
             return File(fileBytes, "text/csv", $"simulation_{time}.csv");

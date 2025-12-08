@@ -8,13 +8,11 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddSingleton<ReactorService>();
 
-// --- MODIFIED CORS SECTION ---
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp",
         policy =>
         {
-            // CHANGE THIS: AllowAnyOrigin() is safer for dev when ports change
             policy.AllowAnyOrigin()
                   .AllowAnyHeader()
                   .AllowAnyMethod();

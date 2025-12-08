@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Ap+VlGt3e5k=",
+  "dgSpecHash": "BdawjzJX8+Q=",
   "success": true,
   "projectFilePath": "E:\\CSTR\\CSTR_MANAGER\\CSTR_MANAGER.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lucas\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.0\\microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
-    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
+    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.ml.onnxruntime\\1.23.2\\microsoft.ml.onnxruntime.1.23.2.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.ml.onnxruntime.managed\\1.23.2\\microsoft.ml.onnxruntime.managed.1.23.2.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\system.numerics.tensors\\9.0.0\\system.numerics.tensors.9.0.0.nupkg.sha512"
   ],
   "logs": []
 }

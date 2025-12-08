@@ -7,24 +7,28 @@
       "RelativeMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|solutionrelative:reactorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|e:\\cstr\\cstr_manager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|e:\\cstr\\cstr_manager\\cstr_reactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|solutionrelative:cstr_reactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|e:\\cstr\\cstr_manager\\controllers\\reactorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|solutionrelative:controllers\\reactorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|e:\\cstr\\cstr_manager\\cstr_reactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|solutionrelative:cstr_reactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|e:\\cstr\\cstr_manager\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|e:\\cstr\\cstr_manager\\reactorsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|solutionrelative:reactorsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|e:\\cstr\\cstr_manager\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|e:\\cstr\\cstr_manager\\cstr_manager.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|solutionrelative:cstr_manager.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|e:\\cstr\\cstr_manager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|e:\\cstr\\cstr_manager\\cstr_manager.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|e:\\cstr\\cstr_manager\\solver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|solutionrelative:solver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|e:\\cstr\\cstr_manager\\cstr_manager.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|solutionrelative:cstr_manager.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{102B19C5-3673-E800-A877-B61508B3E1DF}|CSTR_MANAGER.csproj|e:\\cstr\\cstr_manager\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -64,13 +64,14 @@
               "RelativeDocumentMoniker": "Controllers\\ReactorController.cs",
               "ToolTip": "E:\\CSTR\\CSTR_MANAGER\\Controllers\\ReactorController.cs",
               "RelativeToolTip": "Controllers\\ReactorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAswCUAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T14:52:51.071Z"
+              "WhenOpened": "2025-12-01T14:52:51.071Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CSTR_MANAGER.http",
               "DocumentMoniker": "E:\\CSTR\\CSTR_MANAGER\\CSTR_MANAGER.http",
               "RelativeDocumentMoniker": "CSTR_MANAGER.http",
@@ -78,30 +79,33 @@
               "RelativeToolTip": "CSTR_MANAGER.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-12-01T14:28:56.371Z"
+              "WhenOpened": "2025-12-01T14:28:56.371Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\CSTR\\CSTR_MANAGER\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\CSTR\\CSTR_MANAGER\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T14:25:14.496Z"
+              "WhenOpened": "2025-12-01T14:25:14.496Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "CSTR_MANAGER",
               "DocumentMoniker": "E:\\CSTR\\CSTR_MANAGER\\CSTR_MANAGER.csproj",
               "RelativeDocumentMoniker": "CSTR_MANAGER.csproj",
               "ToolTip": "E:\\CSTR\\CSTR_MANAGER\\CSTR_MANAGER.csproj",
               "RelativeToolTip": "CSTR_MANAGER.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-01T14:53:53.734Z"
+              "WhenOpened": "2025-12-01T14:53:53.734Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -111,26 +115,14 @@
               "RelativeDocumentMoniker": "ReactorService.cs",
               "ToolTip": "E:\\CSTR\\CSTR_MANAGER\\ReactorService.cs",
               "RelativeToolTip": "ReactorService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA1wC0AAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAgwDIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-01T16:05:59.699Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Solver.cs",
-              "DocumentMoniker": "E:\\CSTR\\CSTR_MANAGER\\Solver.cs",
-              "RelativeDocumentMoniker": "Solver.cs",
-              "ToolTip": "E:\\CSTR\\CSTR_MANAGER\\Solver.cs",
-              "RelativeToolTip": "Solver.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAgwCEAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T16:01:07.792Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "CSTR_Reactor.cs",
               "DocumentMoniker": "E:\\CSTR\\CSTR_MANAGER\\CSTR_Reactor.cs",
               "RelativeDocumentMoniker": "CSTR_Reactor.cs",
@@ -138,7 +130,8 @@
               "RelativeToolTip": "CSTR_Reactor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T15:54:23.659Z"
+              "WhenOpened": "2025-12-01T15:54:23.659Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -148,9 +141,10 @@
               "RelativeDocumentMoniker": "ReactorSettings.cs",
               "ToolTip": "E:\\CSTR\\CSTR_MANAGER\\ReactorSettings.cs",
               "RelativeToolTip": "ReactorSettings.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAuwBwAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA1wBgAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T16:00:41.145Z"
+              "WhenOpened": "2025-12-01T16:00:41.145Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -166,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\CSTR\\CSTR_MANAGER\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -174,7 +168,21 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-01T14:28:54.91Z"
+              "WhenOpened": "2025-12-01T14:28:54.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Solver.cs",
+              "DocumentMoniker": "E:\\CSTR\\CSTR_MANAGER\\Solver.cs",
+              "RelativeDocumentMoniker": "Solver.cs",
+              "ToolTip": "E:\\CSTR\\CSTR_MANAGER\\Solver.cs",
+              "RelativeToolTip": "Solver.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwCEAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T16:01:07.792Z",
+              "EditorCaption": ""
             }
           ]
         }

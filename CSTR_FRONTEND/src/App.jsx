@@ -10,7 +10,6 @@ import {
     AccordionBody,
     NumberInput,
     Button,
-    Badge,
     Switch,
 } from "@tremor/react";
 
@@ -63,23 +62,18 @@ const formatTime = (seconds) => {
 };
 
 // --- CUSTOM HOOK: SIMULATION ENGINE ---
-// Handles the loop, API calls, and history management.
 const useReactorEngine = (initialConfig) => {
-    // activeConfig is what gets sent to the backend
     const [activeConfig, setActiveConfig] = useState(deepClone(initialConfig));
-
-    // Simulation Status
     const [isRunning, setIsRunning] = useState(false);
     const [isError, setIsError] = useState(false);
-
-    // Data History
     const [history, setHistory] = useState([]);
 
-    // Ref to track running state inside the async loop without dependency issues
+    // NEW: Track optimization state locally for UI feedback
+    const [isOptimizing, setIsOptimizing] = useState(false);
+
     const runningRef = useRef(false);
     const configRef = useRef(activeConfig);
 
-    // Keep ref in sync
     useEffect(() => {
         configRef.current = activeConfig;
     }, [activeConfig]);
@@ -97,8 +91,9 @@ const useReactorEngine = (initialConfig) => {
             setHistory([]);
             setIsError(false);
             setIsRunning(true);
+            setIsOptimizing(false); // Reset optimization on new init
             runningRef.current = true;
-            runStepLoop(); // Start the loop
+            runStepLoop();
         } catch (err) {
             console.error(err);
             alert("Backend Connection Failed");
@@ -113,11 +108,30 @@ const useReactorEngine = (initialConfig) => {
     const reset = () => {
         stop();
         setHistory([]);
+        setIsOptimizing(false);
         setActiveConfig(deepClone(DEFAULT_CONFIG));
     };
 
+    // --- UPDATED OPTIMIZE FUNCTION ---
+    const triggerOptimization = async () => {
+        try {
+            const res = await fetch(`${API_URL}/reactor/optimize`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+            });
+
+            if (!res.ok) throw new Error("Optimization Trigger Failed");
+
+            // Toggle local state on success so the button updates
+            setIsOptimizing(prev => !prev);
+
+        } catch (err) {
+            console.error(err);
+            alert("Failed to toggle optimization");
+        }
+    };
+
     // --- THE RECURSIVE LOOP ---
-    // Uses recursion instead of setInterval to prevent race conditions
     const runStepLoop = useCallback(async () => {
         if (!runningRef.current) return;
 
@@ -134,8 +148,6 @@ const useReactorEngine = (initialConfig) => {
             if (res.ok) {
                 const data = await res.json();
 
-                // Update the Active Config with new calculation results (Output only)
-                // We functionally update to avoid closure staleness
                 setActiveConfig((prev) => ({
                     ...prev,
                     Operation: {
@@ -146,21 +158,17 @@ const useReactorEngine = (initialConfig) => {
                     },
                 }));
 
-                // Update History
                 setHistory((prev) => {
                     const newPoint = {
-                        time: formatTime(data.operation.currentTime), // Use string for X-axis label
-                        rawTime: data.operation.currentTime,         // Keep raw for sorting if needed
+                        time: formatTime(data.operation.currentTime),
+                        rawTime: data.operation.currentTime,
                         Concentration: data.operation.currentConcentration,
                         Temp: data.operation.currentTemperature,
                     };
-                    // Keep array size manageable
                     const newHist = [...prev, newPoint];
                     return newHist.slice(-MAX_HISTORY_POINTS);
                 });
 
-                // Schedule next step immediately after this one finishes
-                // (Small delay to allow UI to breathe, set to 0 for max speed)
                 if (runningRef.current) {
                     setTimeout(runStepLoop, 50);
                 }
@@ -176,12 +184,14 @@ const useReactorEngine = (initialConfig) => {
 
     return {
         activeConfig,
-        updateActiveConfig: setActiveConfig, // Function to push new params
+        updateActiveConfig: setActiveConfig,
         history,
         isRunning,
         initialize,
         stop,
         reset,
+        triggerOptimization,
+        isOptimizing, // Exported for UI
         isError,
     };
 };
@@ -189,67 +199,47 @@ const useReactorEngine = (initialConfig) => {
 
 // --- MAIN COMPONENT ---
 export default function App() {
-    // 1. Simulation Engine State
     const engine = useReactorEngine(DEFAULT_CONFIG);
-
-    // 2. Local UI State (Form Inputs)
-    // This allows the user to type without immediately disturbing the simulation
     const [localConfig, setLocalConfig] = useState(deepClone(DEFAULT_CONFIG));
-
-    // 3. Auto-Sync Toggle State
     const [autoSync, setAutoSync] = useState(false);
     const [hasPendingChanges, setHasPendingChanges] = useState(false);
 
-    // --- SYNC MECHANISM ---
-    // Whenever the ENGINE updates (e.g. time increments), we must update our local view
-    // BUT only the output variables. We must preserve what the user is typing in the inputs.
     useEffect(() => {
         if (engine.isRunning) {
             setLocalConfig((prev) => ({
                 ...prev,
                 Operation: {
                     ...prev.Operation,
-                    // Only sync outputs from engine
                     currentConcentration: engine.activeConfig.Operation.currentConcentration,
                     currentTemperature: engine.activeConfig.Operation.currentTemperature,
                     currentTime: engine.activeConfig.Operation.currentTime,
                 },
             }));
         } else if (!hasPendingChanges) {
-            // If stopped and no pending changes, keep them fully in sync to avoid confusion
             setLocalConfig(engine.activeConfig);
         }
     }, [engine.activeConfig, engine.isRunning]);
 
-
-    // --- INPUT HANDLER ---
     const handleInputChange = (category, field, value) => {
         const val = parseFloat(value) || 0;
-
-        // 1. Update Local UI immediately so user sees what they type
         const newLocal = {
             ...localConfig,
             [category]: { ...localConfig[category], [field]: val },
         };
         setLocalConfig(newLocal);
 
-        // 2. Logic based on Auto-Sync
         if (autoSync) {
-            // Immediate Update
             engine.updateActiveConfig((prev) => ({
                 ...prev,
                 [category]: { ...prev[category], [field]: val },
             }));
             setHasPendingChanges(false);
         } else {
-            // Defer Update
             setHasPendingChanges(true);
         }
     };
 
-    // --- MANUAL SYNC BUTTON HANDLER ---
     const handlePushParameters = () => {
-        // Push local input fields (inputs only) to the active engine config
         engine.updateActiveConfig((prev) => ({
             ...prev,
             Geometry: localConfig.Geometry,
@@ -257,14 +247,11 @@ export default function App() {
             Reaction: localConfig.Reaction,
             Operation: {
                 ...prev.Operation,
-                // Copy inputs
                 inletFlowrate: localConfig.Operation.inletFlowrate,
                 inletConcentration: localConfig.Operation.inletConcentration,
                 inletTemperature: localConfig.Operation.inletTemperature,
                 coolantTemperature: localConfig.Operation.coolantTemperature,
                 timeStep: localConfig.Operation.timeStep,
-                // Do NOT copy outputs (currentConc, currentTemp, etc) from local, 
-                // trust the engine's state for those.
             }
         }));
         setHasPendingChanges(false);
@@ -318,7 +305,6 @@ export default function App() {
                 {/* CONTROLS FOOTER */}
                 <div className="p-6 bg-gradient-to-t from-white/90 to-transparent flex flex-col gap-3 border-t border-slate-100">
 
-                    {/* THE NEW FEATURE: SYNC CONTROLS */}
                     <div className="flex flex-col gap-2 mb-2 p-3 bg-slate-50 rounded-xl border border-slate-100">
                         <div className="flex justify-between items-center">
                             <span className="text-xs font-semibold text-slate-500">Auto-Update</span>
@@ -330,7 +316,6 @@ export default function App() {
                             />
                         </div>
 
-                        {/* The Manual Button - Only enabled if Auto is OFF and we have changes */}
                         {!autoSync && (
                             <Button
                                 size="xs"
@@ -344,6 +329,31 @@ export default function App() {
                             </Button>
                         )}
                     </div>
+
+                    {/* --- FEEDBACK BUTTON FOR OPTIMIZATION --- */}
+                    <Button
+                        size="md"
+                        // Change style based on state
+                        variant={engine.isOptimizing ? "primary" : "secondary"}
+                        color={engine.isOptimizing ? "emerald" : "violet"}
+                        className={`w-full rounded-xl shadow-sm transition-all duration-300 ${engine.isOptimizing
+                                ? "border-emerald-500 ring-2 ring-emerald-100 shadow-emerald-200/50"
+                                : "border-violet-200 text-violet-600 hover:bg-violet-50"
+                            }`}
+                        onClick={engine.triggerOptimization}
+                    >
+                        {engine.isOptimizing ? (
+                            <div className="flex items-center gap-2">
+                                <span className="relative flex h-2 w-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                                </span>
+                                Optimization Active
+                            </div>
+                        ) : (
+                            "Enable Optimization"
+                        )}
+                    </Button>
 
                     {engine.isRunning ? (
                         <Button
@@ -446,7 +456,7 @@ export default function App() {
                         <ChartCard title="Temperature Progression" data={engine.history} categories={["Temp"]} color="orange" />
                     </div>
 
-                    {/* VISUALIZATION AREA (Uses Active Engine Config for display) */}
+                    {/* VISUALIZATION AREA */}
                     <div className="col-span-4 row-span-5 flex flex-col gap-4 h-full">
                         <RangeCard
                             title="Inlet Flow Rate"
@@ -487,8 +497,7 @@ export default function App() {
     );
 }
 
-// --- SUB-COMPONENTS (Cleaned up) ---
-
+// --- SUB-COMPONENTS ---
 function ChartCard({ title, data, categories, color }) {
     return (
         <div className="bg-white rounded-[2rem] p-6 flex flex-col justify-between transition-all duration-300 ring-1 ring-slate-100 shadow-sm">
